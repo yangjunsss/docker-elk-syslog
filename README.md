@@ -15,13 +15,13 @@ Installed in `Dockerfile` and configure in `./logstash/pipeline/logstash.conf`
 # Requirements
 
 1. Install [Docker](http://docker.io).
-2. Install [Docker-compose](http://docs.docker.com/compose/install/) **version >= 1.6**.
-3. Clone this repository
+2. Install [Docker-compose](http://docs.docker.com/compose/install/).
 
 # Usage
 
-install by `./install.sh`
-And then access Kibana UI by hitting [http://localhost:5601](http://localhost:5601) with a web browser.
+1. `git clone https://github.com/yangjunsss/docker-elk-syslog`
+2. `cd docker-elk-syslog && ./install.sh`
+3. After install successfully then access Kibana UI by hitting [http://localhost:5601](http://localhost:5601) with a web browser.
 
 By default, the stack exposes the following ports:
 * 5140: Logstash syslog input.
@@ -31,7 +31,7 @@ By default, the stack exposes the following ports:
 
 ## Start your application
 
-For example:
+Take nginx for example:
 
 ```bash
 echo "logstash_host 192.168.0.4" >> /etc/hosts
