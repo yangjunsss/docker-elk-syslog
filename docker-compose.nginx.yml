@@ -1,0 +1,12 @@
+version: '2'
+services:
+  parser:
+    image: nginx
+    container_name: nginx
+    ports:
+    - 80:80
+    logging:
+      driver: syslog
+      options:
+        syslog-address: "tcp://logstash_host:5140"
+        tag: "nginx"
