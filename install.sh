@@ -33,6 +33,7 @@ set -e
 set +o noglob
 
 function changemode {
+  mkdir -p ./elasticsearch/data
   chmod 777 ./elasticsearch/data
 }
 
@@ -133,7 +134,8 @@ h2 "[Step $item]: Preparing environment ...";  let item+=1
 changemode
 add_hosts
 
-h2 "[Step $item]: Start instance of Harbor ..."; let item+=1
+h2 "[Step $item]: Start instance ..."; let item+=1
 start_instances
 
 success $"----ELK has been installed and started successfully.----"
+exit 0

@@ -19,6 +19,8 @@ Installed in `Dockerfile` and configure in `./logstash/pipeline/logstash.conf`
 
 ## Usage
 
+### install
+
 1. `git clone https://github.com/yangjunsss/docker-elk-syslog`
 2. `cd docker-elk-syslog && ./install.sh`
 3. After install successfully then access Kibana UI by hitting [http://localhost:5601](http://localhost:5601) with a web browser.
@@ -28,6 +30,10 @@ By default, the stack exposes the following ports:
 * 9200: Elasticsearch HTTP
 * 9300: Elasticsearch TCP transport
 * 5601: Kibana
+
+### stop
+
+`docker-compose -f docker-compose.yml down -v`
 
 ## Start your application
 
@@ -48,7 +54,7 @@ The Kibana default configuration is stored in `kibana/config/kibana.yml`.
 
 The Logstash configuration is stored in `logstash/config/logstash.yml`.
 
-The pipeline configuration is stored in `logstash/pipeline/logstash.yml`
+The Logstash pipeline configuration is stored in `logstash/pipeline/logstash.conf`
 
 The Elasticsearch configuration is stored in `elasticsearch/config/elasticsearch.yml`.
 
