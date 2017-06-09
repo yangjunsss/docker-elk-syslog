@@ -23,6 +23,11 @@ services:
     restart: always
     depends_on:
       - elasticsearch
+    logging:
+      driver: syslog
+      options:
+        syslog-address: "tcp://syslog_host:514"
+        tag: "logstash"
 
   kibana:
     build: kibana/
